@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2002,4938</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2002,5000</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -90,13 +90,13 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DownloadFileFromBrowser" sap:VirtualizedContainerService.HintSize="2012,4773" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence DisplayName="DownloadFileFromBrowser" sap:VirtualizedContainerService.HintSize="2012,4835" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="DownloadFileFromBrowser" Name="WorkflowName" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="IsChildInvoked" />
       <Variable x:TypeArguments="x:Boolean" Name="IsChildWorkflow">
         <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" Value="True" />
+          <Literal x:TypeArguments="x:Boolean" />
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Default="[Environment.CurrentDirectory + &quot;\&quot;]" Name="Cwd" />
@@ -137,7 +137,7 @@
         </If.Then>
       </If>
     </Sequence>
-    <TryCatch DisplayName="TryDownloadFile" sap:VirtualizedContainerService.HintSize="1970,4144" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="TryDownloadFile" sap:VirtualizedContainerService.HintSize="1970,4206" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,7 +145,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="TryDownload" sap:VirtualizedContainerService.HintSize="1932,3895" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <Sequence DisplayName="TryDownload" sap:VirtualizedContainerService.HintSize="1932,3957" sap2010:WorkflowViewState.IdRef="Sequence_22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,22 +165,22 @@
               <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="CreateQuarterFolder" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Path.GetDirectoryName(in_DownloadedFilePath)]" />
             </If.Else>
           </If>
-          <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserObject]" DisplayName="AttachBrowser" sap:VirtualizedContainerService.HintSize="1890,3007" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="93eaacff83826d06541293bf14a9bd22">
+          <ui:BrowserScope BrowserType="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[in_BrowserObject]" DisplayName="AttachBrowser" sap:VirtualizedContainerService.HintSize="1890,3069" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="93eaacff83826d06541293bf14a9bd22">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <ui:GetLastDownloadedFile DisplayName="DownloadFile" DownloadFolder="[in_DefaultDownloadsFolder]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="1856,2861" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2" Timeout="[in_TimeoutDownload]">
+                <ui:GetLastDownloadedFile DisplayName="DownloadFile" DownloadFolder="[in_DefaultDownloadsFolder]" File="[DownloadedFile]" sap:VirtualizedContainerService.HintSize="1856,2923" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2" Timeout="[in_TimeoutDownload]">
                   <ui:GetLastDownloadedFile.Body>
                     <ActivityAction>
-                      <Sequence DisplayName="StartDownloadSequence" sap:VirtualizedContainerService.HintSize="1822,2654" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <Sequence DisplayName="StartDownloadSequence" sap:VirtualizedContainerService.HintSize="1822,2716" sap2010:WorkflowViewState.IdRef="Sequence_20">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[in_IsOfficeFile]" DisplayName="IsOfficeFile" sap:VirtualizedContainerService.HintSize="1780,2500" sap2010:WorkflowViewState.IdRef="If_8">
+                        <If Condition="[in_IsOfficeFile]" DisplayName="IsOfficeFile" sap:VirtualizedContainerService.HintSize="1780,2562" sap2010:WorkflowViewState.IdRef="If_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,13 +188,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="[in_OfficeBrowserType]" DisplayName="OpenOfficeBrowser" sap:VirtualizedContainerService.HintSize="980,2343" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_OfficeFileURL]">
+                            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="[in_OfficeBrowserType]" DisplayName="OpenOfficeBrowser" sap:VirtualizedContainerService.HintSize="980,2405" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[in_OfficeFileURL]">
                               <ui:OpenBrowser.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="OfficeFile" sap:VirtualizedContainerService.HintSize="946,2242" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                  <Sequence DisplayName="OfficeFile" sap:VirtualizedContainerService.HintSize="946,2304" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Boolean" Name="IsNotLogged" />
                                     </Sequence.Variables>
@@ -204,6 +204,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="904,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
                                     <ui:UiElementExists DisplayName="ChooseAccountAppear" Exists="[IsNotLogged]" sap:VirtualizedContainerService.HintSize="904,68" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                                       <ui:UiElementExists.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3350343-279d-4d3f-adb6-550a106852ee" Selector="&lt;webctrl parentid='tilesHolder' tag='DIV' /&gt;" TimeoutMS="3000">
@@ -537,7 +538,7 @@
                             </ui:OpenBrowser>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="NotOfficeFile" sap:VirtualizedContainerService.HintSize="755,1492" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                            <Sequence DisplayName="NotOfficeFile" sap:VirtualizedContainerService.HintSize="755,1491" sap2010:WorkflowViewState.IdRef="Sequence_25">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -588,7 +589,7 @@
                                 </ui:UiElementExists.Target>
                               </ui:UiElementExists>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="713,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Message="[&quot;Save As PopUp Exists: &quot;+SaveAsPopUpExists.ToString]" />
-                              <If Condition="[SaveAsPopUpExists]" DisplayName="PopUpSaveAsWindow" sap:VirtualizedContainerService.HintSize="713,896" sap2010:WorkflowViewState.IdRef="If_10">
+                              <If Condition="[SaveAsPopUpExists]" DisplayName="PopUpSaveAsWindow" sap:VirtualizedContainerService.HintSize="713,895" sap2010:WorkflowViewState.IdRef="If_10">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
